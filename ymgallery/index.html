@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="windows_screen">
+
+    <div class="screen" id="screen" onclick="windowsopenn();">
+        <div class="apps" id="apps">
+        <a href="https://discord.gg/yazilimcimekani" target="_blank">
+            <div class="discordapp">
+                <img src="./img/discord.png" alt="discord">
+                <label>Discord</label>
+            </div>
+        </a>
+            <div class="galleryapp" onclick="openGallery();">
+                <img src="./img/gallery.svg" alt="gallery">
+                <label>Galeri</label>
+            </div>
+
+        </div>
+
+    
+        <div class="windowsopened" id="windowsopened" >
+            <div class="openedtop">
+                Yazılımcı Mekanı Galeri <br><br><br>
+                <img src="./img/qr-code.svg" alt="qrcode">
+            </div>
+            <div class="openedbottom">
+                <img src="./img/users/davuk.jpg" alt="davuk">
+                <label>Alwose#0125</label>
+            </div>
+        </div>
+   
+
+
+
+
+
+        
+        <div class="photosapp" id="photosapp">
+            <div class="tophead" id="tophead">
+                <span onclick="closeGallery();">
+                    <img src="./img/underscore.svg" alt="underscore">
+                </span>
+                <span onclick="closeGallery();">
+                    <img src="./img/close.svg" alt="close">
+                </span>
+            </div>
+            <div class="head">
+                <div class="headhead">
+                    <div class="left">
+                        <form class="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <input type="text" placeholder="Ara..">
+                        </form>
+                    </div>
+                    <div class="right">
+                        <img src="./img/squares.png" alt="squares" onclick="genislet();">
+                        <i class="fa-regular fa-square" onclick="daralt();"></i>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="photos"> 
+
+                <div class="photosmaindiv">
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img1.jpg" alt="1">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img2.jpg" alt="2">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img3.jpg" alt="3">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img4.jpg" alt="4">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img5.jpg" alt="5">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img6.jpg" alt="6">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img7.jpg" alt="7">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img8.jpg" alt="8">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img9.jpg" alt="9">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img10.jpg" alt="10">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img11.jpg" alt="11">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img12.jpg" alt="12">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img13.jpg" alt="13">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img14.jpg" alt="14">
+                    </div>
+                    <div class="photosdiv">
+                        <img src="./img/postimgs/img15.jpg" alt="15">
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="task_bar">
+        <img src="./img/win.svg" alt="windows" onclick="windowsopen();">
+        <img src="./img/search.svg" alt="search">
+        <a href="https://discord.gg/yazilimcimekani" target="_blank"> <img src="./img/discord.png" alt="discord"></a>
+        <img src="./img/gallery.svg" alt="gallery" onclick="openGallery();" id="taskgallery">
+    </div>
+
+
+    </div>
+
+<script>
+
+function openGallery(){
+    let gallery = document.getElementById("photosapp");
+    let screen = document.getElementById("screen");
+    let apps = document.getElementById("apps");
+    let taskgallery = document.getElementById("taskgallery");
+
+    apps.style.display = "none"
+    screen.style.height = "unset";
+    gallery.style.display = "flex";
+    taskgallery.setAttribute( "onClick", "javascript:closeGallery();" );
+
+}
+
+function closeGallery(){
+    let gallery = document.getElementById("photosapp");
+    let screen = document.getElementById("screen");
+    let apps = document.getElementById("apps");
+    let taskgallery = document.getElementById("taskgallery");
+
+    apps.style.display = "block"
+    screen.style.height = "100vh";
+    gallery.style.display = "none";
+    taskgallery.setAttribute( "onClick", "javascript:openGallery();" );
+
+}
+
+function windowsopen(){
+    let windows = document.getElementById("windowsopened");
+
+    if(windows.style.display == "none"){
+        windows.style.display = "block";
+    }else{
+        windows.style.display = "none";
+    }
+
+}
+
+function windowsopenn(){
+    let windows = document.getElementById("windowsopened");
+
+    if(windows.style.display == "block"){
+        windows.style.display = "none";
+    }
+
+}
+
+function daralt(){
+    let genislet = document.getElementsByClassName("photosdiv");
+    let maindiv = document.getElementsByClassName("photosmaindiv");
+    maindiv[0].style.justifyContent = "center";
+    for (let index = 0; index < genislet.length; index++) {
+        const element = genislet[index];
+        element.style.width = "80%";
+    }
+
+}
+
+function genislet(){
+    let genislet = document.getElementsByClassName("photosdiv");
+    let maindiv = document.getElementsByClassName("photosmaindiv");
+    maindiv[0].style.justifyContent = "space-between";
+    for (let index = 0; index < genislet.length; index++) {
+        const element = genislet[index];
+        element.style.width = "48%";
+    }
+
+}
+
+
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("tophead");
+var sticky = navbar.offsetTop;
+function myFunction() {
+    console.log(window.pageYOffset);
+  if (window.pageYOffset >= 10) {
+    navbar.style.position = "fixed";
+  } else {
+    navbar.style.position = "unset";
+  }
+}
+</script>
+
+</body>
+</html>
